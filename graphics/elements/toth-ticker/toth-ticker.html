@@ -9,13 +9,13 @@
 				bottom: 0;
 				left: 0;
 				width: 100%;
-				height: 40px;
+				height: 48px;
 				box-sizing: border-box;
-				border-top: 3px solid #f47425;
+				border-top: 3px solid #ffffff;
 				background-color: #151515;
 				font-family: 'proxima-nova';
 				color: white;
-				--toth-ticker-content-color: #f47425;
+				--toth-ticker-content-color: #ffffff;
 				white-space: nowrap;
 				align-items: flex-end;
 			}
@@ -89,7 +89,7 @@
 
 			#cta {
 				position: absolute;
-				height: 38px;
+				height: 48px;
 				width: 100%;
 				text-align: center;
 				font-size: 30px;
@@ -102,7 +102,7 @@
 			#cta-1,
 			#cta-2 {
 				height: 100%;
-				line-height: 40px;
+				line-height: 48px;
 			}
 
 			#challengeAccepted-text-2 {
@@ -142,8 +142,19 @@
 			#total {
 				display: flex;
 				align-items: baseline;
-				background-color: #f47425;
+				background-color: #25cbf4;
 				padding: 0 14px;
+				flex-shrink: 0;
+				font-weight: 700;
+				margin-left: 24px;
+				height: 54px;
+			}
+
+			#hope-you-enjoy {
+				display: block;
+				align-items: baseline;
+				background-color: #25cbf4;
+				padding: 16px 14px;
 				flex-shrink: 0;
 				font-weight: 700;
 				margin-left: 24px;
@@ -163,9 +174,16 @@
 				font-variant-numeric: tabular-nums;
 				font-feature-settings: "tnum";
 			}
+
+			#streamer-title {
+				font-size: 22px;
+				line-height: 0;
+				display: block;
+				padding: 0 30px;
+			}
 		</style>
 
-		<img id="toth-logo" src="./elements/toth-ticker/img/toth-logo.png">
+		<p id="streamer-title">SURFERX10's TWITCH.TV</p>
 		<div id="main">
 			<div id="label"></div>
 			<div id="body">
@@ -173,13 +191,13 @@
 			</div>
 			<div id="cta">
 				<div id="cta-1">
-					<span style="color: #f47425;">Tip of the Hats 2017</span>
-					supports
-					<span style="font-weight: 800;">Camp One Step</span>
+					<span style="color: #89f425;">Affinity MWS</span>
+					sponsors
+					<span style="font-weight: 800;">Surferx10</span>
 				</div>
 
 				<div id="cta-2">
-					Donate now at <span style="color: #f47425; font-weight: 800;">tipofthehats.org/donate</span>
+					Check out more projects @ <span style="color: #89f425; font-weight: 800;">affinitymws.com</span>
 				</div>
 			</div>
 			<div id="challengeAccepted">
@@ -191,8 +209,9 @@
 			</div>
 		</div>
 		<div id="total">
-			<div id="total-currency">$</div>
-			<div id="total-amount">?</div>
+			<div id="hope-you-enjoy">Hope you enjoy watching!</div>
+			<!-- <div id="total-currency">$</div>
+			<div id="total-amount">?</div> -->
 		</div>
 	</template>
 

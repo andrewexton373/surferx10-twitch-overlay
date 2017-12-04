@@ -55,68 +55,6 @@ module.exports = function (nodecg) {
 			'\n\tThe total will still be displayed.');
 	}
 
-	let latestScrapDonationTime;
-	if (nodecg.bundleConfig && nodecg.bundleConfig.scraptf) {
-		// Initialize latestDonationTime
-		request({
-			uri: 'https://scrap.tf/api/fundraisers/getdonations.php',
-			qs: {
-				fundraiser: nodecg.bundleConfig.scraptf.fundraiserId,
-				key: nodecg.bundleConfig.scraptf.apiKey,
-				num: 1
-			},
-			json: true
-		}).then(response => {
-			latestScrapDonationTime = response.latest_donation;
-			setInterval(fetchNewScrapDonations, 10 * 1000);
-		}).catch(err => {
-			nodecg.log.warn('Failed to initialize latestDonationTime from Scrap.tf:', err);
-		});
-	} else {
-		nodecg.log.error(`cfg/${nodecg.bundleName}.json is missing the "scraptf" property. ` +
-			'\n\tThis means that we cannot receive new incoming item donations from scrap.tf, ' +
-			'\n\tand that they will not be displayed in the top left corner as a result.');
-	}
-
-	function fetchNewScrapDonations() {
-		request({
-			uri: 'https://scrap.tf/api/fundraisers/getdonations.php',
-			qs: {
-				fundraiser: nodecg.bundleConfig.scraptf.fundraiserId,
-				key: nodecg.bundleConfig.scraptf.apiKey,
-				confirmed_after: latestScrapDonationTime
-			},
-			json: true
-		}).then(response => {
-			if (!response) {
-				return;
-			}
-
-			if (typeof response !== 'object') {
-				return;
-			}
-
-			// latest_donation is zero if the response contains no donations
-			if (response.latest_donation) {
-				latestScrapDonationTime = response.latest_donation;
-			}
-
-			if (response.donations) {
-				response.donations.forEach(donation => {
-					const formattedDonation = formatDonation({
-						name: donation.user.name,
-						rawAmount: donation.cash_value,
-						type: 'item'
-					});
-					nodecg.log.debug('Emitting ITEM donation:', formattedDonation);
-					nodecg.sendMessage('donation', formattedDonation);
-				});
-			}
-		}).catch(err => {
-			nodecg.log.error('Failed to fetch Scrap.tf donations:', err);
-		});
-	}
-
 	function formatDonation({name, rawAmount, type}) {
 		// Truncate name to 30 characters
 		name = name || 'Anonymous';

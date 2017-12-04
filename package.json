@@ -1,18 +1,14 @@
 {
-  "name": "toth5-overlay",
+  "name": "x10-overlay",
   "repository": {
     "type": "git",
-    "url": "git@github.com:TipoftheHats/toth5-overlay.git"
+    "url": "git@github.com:andrewexton373/surferx10-twitch-overlay.git"
   },
-  "homepage": "http://tipofthehats.org/",
-  "authors": [
-    "Alex Van Camp <email@alexvan.camp>"
-  ],
+  "homepage": "http://affinitymws.com/",
   "scripts": {
     "static": "eslint **/*.js **/*.html && polymer lint",
     "test": "npm run static"
   },
-  "description": "The main broadcast assets for Tip of the Hats 2016.",
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
@@ -48,11 +44,6 @@
         "height": 1080
       },
       {
-        "file": "dotafortress.html",
-        "width": 1920,
-        "height": 1080
-      },
-      {
         "file": "td_talkback.html",
         "width": 1280,
         "height": 720,
@@ -68,16 +59,6 @@
         "file": "countdown.html",
         "width": 1920,
         "height": 1080
-      },
-      {
-        "file": "blu_pick_ban.html",
-        "width": 1920,
-        "height": 1080
-      },
-      {
-        "file": "red_pick_ban.html",
-        "width": 1920,
-        "height": 1080
       }
     ],
     "dashboardPanels": [
@@ -87,14 +68,6 @@
         "file": "live-controls.html",
         "headerColor": "#f47425",
         "fullbleed": true
-      },
-      {
-        "name": "dota-fortress",
-        "title": "Dota Fortress",
-        "width": 4,
-        "file": "dota-fortress.html",
-        "headerColor": "#f47425",
-        "workspace": "Misc"
       },
       {
         "name": "countdown",

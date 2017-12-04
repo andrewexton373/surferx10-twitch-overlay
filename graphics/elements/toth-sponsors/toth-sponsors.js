@@ -16,10 +16,8 @@
 				logoUrls: {
 					type: Array,
 					value: [
-						'url("img/sponsors/marketplacetf.png")',
-						'url("img/sponsors/twitch.png")',
-						'url("img/sponsors/esportsarena.png")'
-					]
+						'url("img/sponsors/affinity_1.png")',
+						'url("img/sponsors/affinity_2.png")'					]
 				},
 				duration: {
 					type: Number,

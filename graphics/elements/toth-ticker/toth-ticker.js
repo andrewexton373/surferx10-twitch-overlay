@@ -122,7 +122,7 @@
 			this.tl.call(() => {
 				this.$.content.style.width = 'auto';
 				this.updateStyles({
-					'--toth-ticker-content-color': '#f47425'
+					'--toth-ticker-content-color': '#25cbf4'
 				});
 				this.$.label.innerText = 'ON NOW';
 				this.$.content.innerHTML = onNow.value;

@@ -13,17 +13,17 @@ module.exports = function (nodecg) {
 	nodecg.Replicant('showHashtag');
 
 	require('./lowerthird')(nodecg);
-	require('./total')(nodecg);
-	require('./donations')(nodecg);
-	require('./bids')(nodecg);
-	require('./completed-challenges')(nodecg);
-	require('./nowplaying')(nodecg);
-	require('./dotafortress')(nodecg);
-	require('./twitter')(nodecg);
-	require('./x32')(nodecg);
-	require('./countdown')(nodecg);
-	require('./nameplates')(nodecg);
-	require('./overwatch-scoreboard')(nodecg);
+	//require('./total')(nodecg);
+	//require('./donations')(nodecg);
+	// require('./bids')(nodecg);
+	// require('./completed-challenges')(nodecg);
+	//require('./nowplaying')(nodecg);
+	// require('./dotafortress')(nodecg);
+	// require('./twitter')(nodecg);
+	// require('./x32')(nodecg);
+	// require('./countdown')(nodecg);
+	// require('./nameplates')(nodecg);
+	// require('./overwatch-scoreboard')(nodecg);
 
 	if (nodecg.bundleConfig.twitch) {
 		require('./twitch');
