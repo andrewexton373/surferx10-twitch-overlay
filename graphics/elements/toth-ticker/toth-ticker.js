@@ -27,7 +27,7 @@
 
 			super.ready();
 			this.tl = new TimelineLite({autoRemoveChildren: true});
-			this.$['total-amount'].rawValue = 0;
+			//this.$['total-amount'].rawValue = 0;
 			this.tl.set(this.$.content, {y: '100%'});
 			nodecg.listenFor('challengeAccepted', this.challengeAccepted);
 		}
@@ -44,25 +44,25 @@
 		}
 
 		totalChanged(newVal) {
-			const TIME_PER_DOLLAR = 0.03;
-			const totalAmountEl = this.$['total-amount'];
-			const delta = newVal.raw - totalAmountEl.rawValue;
-			const duration = Math.min(delta * TIME_PER_DOLLAR, 5);
-			let strLen = totalAmountEl.textContent.length;
-			TweenLite.to(totalAmountEl, duration, {
-				rawValue: newVal.raw,
-				ease: Power2.easeOut,
-				onUpdate: function () {
-					totalAmountEl.textContent = totalAmountEl.rawValue.toLocaleString('en-US', {
-						maximumFractionDigits: 0
-					});
+			// const TIME_PER_DOLLAR = 0.03;
+			// const totalAmountEl = this.$['total-amount'];
+			// const delta = newVal.raw - totalAmountEl.rawValue;
+			// const duration = Math.min(delta * TIME_PER_DOLLAR, 5);
+			// let strLen = totalAmountEl.textContent.length;
+			// TweenLite.to(totalAmountEl, duration, {
+			// 	rawValue: newVal.raw,
+			// 	ease: Power2.easeOut,
+			// 	onUpdate: function () {
+			// 		totalAmountEl.textContent = totalAmountEl.rawValue.toLocaleString('en-US', {
+			// 			maximumFractionDigits: 0
+			// 		});
 
-					if (totalAmountEl.textContent.length !== strLen) {
-						this.fitContent();
-						strLen = totalAmountEl.textContent.length;
-					}
-				}.bind(this)
-			});
+			// 		if (totalAmountEl.textContent.length !== strLen) {
+			// 			this.fitContent();
+			// 			strLen = totalAmountEl.textContent.length;
+			// 		}
+			// 	}.bind(this)
+			// });
 		}
 
 		fitContent() {

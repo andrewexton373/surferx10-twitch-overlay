@@ -43,21 +43,21 @@
 			});
 
 			upNext.on('change', newVal => {
-				TweenLite.to(this.$.upNext, 0.5, {
-					opacity: newVal ? 1 : 0,
-					ease: Power1.easeInOut,
-					callbackScope: this,
-					onStart() {
-						if (newVal) {
-							this.$.event.innerText = newVal;
-						}
-					},
-					onComplete() {
-						if (!newVal) {
-							this.$.event.innerText = newVal;
-						}
-					}
-				});
+				// TweenLite.to(this.$.upNext, 0.5, {
+				// 	opacity: newVal ? 1 : 0,
+				// 	ease: Power1.easeInOut,
+				// 	callbackScope: this,
+				// 	onStart() {
+				// 		if (newVal) {
+				// 			this.$.event.innerText = newVal;
+				// 		}
+				// 	},
+				// 	onComplete() {
+				// 		if (!newVal) {
+				// 			this.$.event.innerText = newVal;
+				// 		}
+				// 	}
+				// });
 			});
 
 			const tl = new TimelineMax({repeat: -1});
