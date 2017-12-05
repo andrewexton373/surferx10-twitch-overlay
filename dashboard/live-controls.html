@@ -3,15 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<script src="../bower_components/webcomponentsjs/webcomponents-loader.js"></script>
-	<link rel="import" href="elements/dash-donations/dash-donations.html">
+	<!-- <link rel="import" href="elements/dash-donations/dash-donations.html"> -->
 	<link rel="import" href="elements/dash-lowerthird/dash-lowerthird.html">
 	<link rel="import" href="elements/dash-master/dash-master.html">
-	<link rel="import" href="elements/dash-nameplates/dash-nameplates.html">
-	<link rel="import" href="elements/dash-nowplaying/dash-nowplaying.html">
+	<!-- <link rel="import" href="elements/dash-nameplates/dash-nameplates.html"> -->
+	<!-- <link rel="import" href="elements/dash-nowplaying/dash-nowplaying.html"> -->
 	<link rel="import" href="elements/dash-schedule/dash-schedule.html">
-	<link rel="import" href="elements/dash-scoreboard/dash-scoreboard.html">
+	<!-- <link rel="import" href="elements/dash-scoreboard/dash-scoreboard.html"> -->
 	<link rel="import" href="elements/dash-section/dash-section.html">
-	<link rel="import" href="elements/dash-twitter/dash-twitter.html">
+	<!-- <link rel="import" href="elements/dash-twitter/dash-twitter.html"> -->
 
 	<custom-style>
 		<style>
@@ -74,34 +74,36 @@
 			<dash-schedule></dash-schedule>
 		</dash-section>
 
-		<dash-section label="Donations" icon="editor:monetization-on">
-			<dash-donations></dash-donations>
+		<dash-section label="Lowerthirds" icon="maps:person-pin">
+			<dash-lowerthird></dash-lowerthird>
+			<!-- <dash-nameplates></dash-nameplates> -->
 		</dash-section>
 
-		<dash-section label="Twitter" icon="social:share">
-			<dash-twitter></dash-twitter>
-		</dash-section>
-	</div>
-
-	<div id="centerColumn" class="column">
 		<dash-section label="Master" icon="settings">
 			<dash-master></dash-master>
 		</dash-section>
 
-		<dash-section label="Scoreboard" icon="hardware:gamepad">
-			<dash-scoreboard></dash-scoreboard>
-		</dash-section>
+		<!-- <dash-section label="Donations" icon="editor:monetization-on">
+			<dash-donations></dash-donations>
+		</dash-section> -->
 
-		<dash-section label="Now Playing" icon="av:library-music">
+		<!-- <dash-section label="Twitter" icon="social:share">
+			<dash-twitter></dash-twitter>
+		</dash-section> -->
+	</div>
+
+	<div id="centerColumn" class="column">
+		<!-- <dash-section label="Scoreboard" icon="hardware:gamepad">
+			<dash-scoreboard></dash-scoreboard>
+		</dash-section> -->
+
+		<!-- <dash-section label="Now Playing" icon="av:library-music">
 			<dash-nowplaying></dash-nowplaying>
-		</dash-section>
+		</dash-section> -->
 	</div>
 
 	<div id="rightColumn" class="column">
-		<dash-section label="Lowerthirds" icon="maps:person-pin">
-			<dash-lowerthird></dash-lowerthird>
-			<dash-nameplates></dash-nameplates>
-		</dash-section>
+		
 	</div>
 </div>
 </body>
